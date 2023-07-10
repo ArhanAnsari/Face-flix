@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <style>
+        * {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+   
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+            style="color:yellow;">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color:rgb(48, 43, 43);">
+                    <div class="modal-header">
+
+                        <h3 style="color:#Fcf6f5ff;font-family: 'Montserrat', sans-serif;"> Welcome, <br />
+                            <%= name %>
+                        </h3>
+
+
+                    </div>
+                    <div class="modal-body">
+                        <h4 style="color:#Fcf6f5ff"> Choose films based on your mood. <h4>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a href="/webcam" type="button" class="btn btn-danger"
+                            style="background-color: #990033FF;color:azure">Capture</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header" id="header">
+                <div class="logo">
+                    <img src="../static/images/1150px-IMDB_Logo_2016.svg.png" />
+                </div>
+                <div class="element">
+                    <a href="/" class="a_element">MOVREC</a>
+                </div>
+                 <div class="box">
+                    <h3 style="color:#Fcf6f5ff;font-family: 'Montserrat', sans-serif;font-weight: bolder;"> Welcome
+                        <%= name %>
+                    </h3>
+                </div>
+               
+                <div class="element s1">
+                    <a class="a_element" href="/movies">Shows</a>
+                </div>
+
+                <div class="element s2">
+                    <a href="/user/logout" class="a_element">Logout</a>
+                </div>
+
+            </div>
+        </div>
+        <!-- Header -->
+
+        <!-- Section -->
+        <section class="section">
+            <aside class="aside_left">
+                <div class="main">
+                    <div class="single-column">
+                        <a href="#"><img src="../static/images/Darcula.jpg" alt="image"></a>
+                        <a href="#"><img src="../static/images/avengerss.jpg" alt="image"></a>
+                        <a href="#"><img
+                                src="../static/images/282-2829509_captain-america-civil-war-hd-wallpaper-captain-america.png"
+                                alt="image"></a>
+                        <a href="#"><img src="../static/images/God of eqypt.jpg" alt="image"></a>
+                    </div>
+                    <div class="single-column">
+                        <a href="#"><img src="../static/images/captain-america.jpg" alt="image"></a>
+                        <a href="#"><img src="../static/images/5917.png" alt="image"></a>
+                        <a href="#"><img
+                                src="../static/images/67-672034_download-hd-wallpapers-hollywood-movies-gallery-avengers-2012.jpg"
+                                alt="image"></a>
+                        <a href="#"><img src="../static/images/spider-man-homecoming-banner-e1508433430979.jpg"
+                                alt="image"></a>
+                    </div>
+                    <div class="single-column">
+                        <a href="#"><img src="../static/images/330-3306299_nicola-hollywood-adventure-movies-name.jpg"
+                                alt="image"></a>
+                        <a href="#"><img src="../static/images/war.jpg" alt="image"></a>
+                        <a href="#"><img src="../static/images/oblivion.jpg" alt="image"></a>
+                        <a href="#"><img src="../static/images/frozen2.jpg" alt="image"></a>
+                    </div>
+                    <div class="single-column">
+                        <a href="#"><img src="../static/images/112-1126755_drive-angry-hollywood-movie.jpg"
+                                alt="image"></a>
+                        <a href="#"><img src="../static/images/67-670892_hollywood-movie-wallpaper-hd.jpg"
+                                alt="image"></a>
+                        <a href="#"><img
+                                src="../static/images/17-174379_2016-angry-birds-movie-wallpapers-hd-wallpapers-angry.jpg"
+                                alt="image"></a>
+                        <a href="#"><img src="../static/images/avatar.jpg" alt="image"></a>
+                    </div>
+                    <div class="single-column">
+                        <a href="#"><img src="../static/images/aladdin.jpg" alt="image"></a>
+                        <a href="#"><img src="../static/images/wallpapersden.com_joaquin-phoenix-as-joker_2880x1800.jpg"
+                                alt="image"></a>
+                        <a href="#"><img src="../static/images/wallpapersden.com_new-shazam-movie-poster_2880x1800.jpg"
+                                alt="image"></a>
+                        <a href="#"><img src="../static/images/wallpapersden.com_itachi-uchiha-cool-art_2880x1800.jpg"
+                                alt="image"></a>
+                    </div>
+                </div>
+            </aside>
+            <div class="aside_right">
+                <div class="sidebar">
+
+                </div>
+            </div>
+        </section>
+        <!-- Section -->
+
+
+        <!-- Movies -->
+        <section class="movies">
+            <div class="content">
+                <h2>IMDB</h2>
+                <p>Movies are the sources of fun</p>
+            </div>
+            <div class="waves"></div>
+        </section>
+        <!-- Movies    -->
+
+
+        <!-- 
+    
+    <section class="slideshow">
+                    <a href="#"><img src="images/Darcula.jpg" alt="image"></a>
+
+    </section>
+ -->
+
+
+        <!-- Genre -->
+        <div class="portfolio">
+            <h1 style="font-size:34px; font-family:Montserrat;color:white">Genres</h1>
+            <div class="container portfolio_container">
+
+                <div class="project project_1">
+                    <div class="pr">
+                        <a href="/movies3/Action">
+                            <h1 class="pheading">Action</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="project project_2">
+                    <div class="pr">
+                        <a href="/movies3/Comedy">
+                            <h1 class="pheading">Comedy</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="project project_3">
+                    <div class="pr">
+                        <a href="/movies3/Drama">
+                            <h1 class="pheading">Drama</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="project project_4">
+                    <div class="pr">
+                        <a href="/movies3/Fantasy">
+                            <h1 class="pheading">Fantasy</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="project project_5">
+                    <div class="pr">
+                        <a href="/movies3/Horror">
+                            <h1 class="pheading">Horror</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="project project_6">
+                    <div class="pr">
+                        <a href="/movies3/Mystery">
+                            <h1 class="pheading">Mystery</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="project project_7">
+                    <div class="pr">
+                        <a href="/movies3/Romance">
+                            <h1 class="pheading">Romance</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="project project_8">
+                    <div class="pr">
+                        <a href="/movies3/Adventure">
+                            <h1 class="pheading">Adventure</h1>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Genre -->
+
+
+
+        <!-- Section -->
+        <div class="about" id="#about">
+            <div class="container about_container">
+                <span class="start_text">
+                    <p class="start_text1"
+                        style="font-size:30px; text-align:left; letter-spacing: 2px; font-family:Montserrat;">
+                        <span
+                            style="font-weight:bold; color:#990033FF ; font-size:34px ;font-family:Montserrat;position:relative;top:25vpx;">
+                            Confused ?
+                        </span>
+                        <span style="position:relative;top:78vpx; color:black; font-size: 34px;">What to watch?</span>
+                    </p>
+                    <a href="/webcam" class="about_container"><button class="button ">Camera</button></a>
+                </span>
+            </div>
+        </div>
+        <!-- Section -->
+
+
+        <!-- Youtube videos -->
+        <div class="ytvid1">
+        </div>
+
+        <div class="container1 ytcontainer">
+            <div class="ytvid">
+                <iframe width="660" height="330" src="https://www.youtube.com/embed/WLNKE4tDZiA"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="ytvid">
+                <iframe width="660" height="330" src="https://www.youtube.com/embed/mySVC0yX_hM"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="ytvid">
+                <iframe width="660" height="330" src="https://www.youtube.com/embed/XAc9Nqt351U"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="ytvid">
+                <iframe width="660" height="330" src="https://www.youtube.com/embed/ulQ-F0qKGng"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <!-- Youtube videos -->
+
+        <!-- Footer -->
+        <footer class="text-center " style="background-color: #990033FF; margin:0px;">
+            <!-- Grid container -->
+            <div class="container" style="max-width:100%;">
+                <!-- Section: Links -->
+                <section class="mt-5">
+                    <!-- Grid row-->
+                    <div class="row text-center justify-content-center  ">
+                        <!-- Grid column -->
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="/" class="text-white" style="font-family:Montserrat;font-size:18px">Get the
+                                    IMDb App</a>
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="/" class="text-white" style="font-family:Montserrat;font-size:18px">Office
+                                    Mojo</a>
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="/" class="text-white" style="font-family:Montserrat;font-size:18px">Conditions
+                                    of Use</a>
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="/" class="text-white "
+                                    style="font-family:Montserrat;font-size:18px">IMDbProBox</a>
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="/" class="text-white" style="font-family:Montserrat;font-size:18px">Privacy
+                                    Policy</a>
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row-->
+                </section>
+                <!-- Section: Links -->
+                <!-- Section: Text -->
+                <section class="mb-5 ">
+                    <hr style="height:3px; width:100%; border-width:0.5;  background-color:white">
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <p class="text-uppercase text-center font-weight-bold"
+                                style="font-family:Montserrat; font-size:20px; text-spacing:2px;">IMDb is an online
+                                database of information related to films, television programs, home videos, video games,
+                                and streaming content online – including cast, production crew and personal biographies,
+                                plot summaries, trivia, ratings, and fan and critical reviews.</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Text -->
+
+                <!-- Section: Social -->
+                <section class="text-center mb-5 container-fluid">
+                    <div class="row  justify-content-center container-fluid ">
+                        <div class="col-sm-4 ">
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <img src="../static/images/facebook.svg" />
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="https://twitter.com/i/flow/login" target="_blank">
+                                <img src="../static/images/twitter.svg" />
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="https://www.instagram.com" target="_blank">
+                            <img src="../static/images/instagram.svg" />
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="https://www.twitch.tv/" target="_blank">
+                                <img src="../static/images/twitch.svg" />
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="https://www.youtube.com" target="_blank">
+                                <img src="../static/images/youtube.svg" />
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Social -->
+
+                <!-- Grid container -->
+
+
+
+            </div>
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: #000000;">
+                <span class="text-yellow" style="font-family:Montserrat;">©2022 by IMDbLite.com, Inc. :</span>
+                <a class="text-white" style="font-family:Montserrat;">Made by Dhwani Kaushal</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+
+
+        <script>
+            window.onscroll = function () {
+                if (window.pageYOffset > 5) {
+                    document.getElementById('header').style.backgroundColor = "rgba(0,0,0,0.5)";
+                    document.getElementById('header').style.backgroundColor = "rgba(0,0,0,1)";
+
+                }
+            }
+
+            $(document).ready(function () {
+
+                $("#exampleModal").modal("show");
+
+            })
+        </script>
+        <script src="../static/js/myscript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+
+      .bg {
+        /* The image used */
+        background-image: url("../static/images/bgimage2.jpg");
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .container {
+        height: 100px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #my_camera {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        box-sizing: border-box;
+        box-shadow: 10px 10px 10px #888888;
+        padding: 10px 10px 10px 10px;
+        overflow: hidden;
+      }
+      #snap {
+        background-color: rgb(255, 157, 0);
+        border-radius: 8px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        height: 40px;
+        line-height: 20px;
+        list-style: none;
+        margin: auto;
+        outline: none;
+        padding: 10px 16px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: color 100ms;
+        vertical-align: baseline;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      #snap:hover,
+      #snap:focus {
+        background-color: #ff213b;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bg">
+      <div id="my_camera"></div>
+      <div class="container">
+        <input
+          type="button"
+          value="Take Snapshot"
+          onClick="take_snapshot()"
+          id="snap"
+        />
+      </div>
+      <form action="/movies2" method="post" id="myform">
+        <input
+          id="myemotion"
+          type="text"
+          style="display: none"
+          name="myemotion"
+        />
+      </form>
+      <!-- <img id="myImg" /> -->
+      <input id="myfile" type="file" style="display: none" name="myfile" />
+    </div>
+
+    <!-- Webcam.min.js -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"
+    ></script>
+
+    <!-- Configure a few settings and attach camera -->
+    <script language="JavaScript">
+      Webcam.set({
+        width: 800,
+        height: 500,
+        image_format: "jpeg",
+        jpeg_quality:  100,
+        flip_horiz: true,
+        unfreeze_snap: false,
+      });
+      Webcam.attach("#my_camera");
+
+      // Code to handle taking the snapshot and displaying it locally
+      function take_snapshot() {
+        // take snapshot and get image data
+        Webcam.snap(async function (data_uri) {
+          //   const img = document.getElementById("myImg");
+          //   img.src = data_uri;
+          //   const input = document.getElementById("myImg");
+          // let photo = document.getElementById("myfile").files[0];
+
+          
+          let formdata = new FormData();
+          formdata.append("photo",data_uri);
+          //console.log(data_uri);
+          
+          fetch("http://127.0.0.1:4000/predict", {
+            method: "POST",
+            body: formdata,
+          })
+            .then(async (response) => {
+              const isJson = response.headers
+                .get("content-type")
+                ?.includes("application/json");
+              const data = isJson ? await response.json() : null;
+              if (!response.ok) {
+                // get error message from body or default to response status
+                const error = (data && data.message) || response.status;
+                return Promise.reject(error);
+              }
+              console.log("API HIT", data.emotion);
+              document.getElementById("myemotion").value = data.emotion;
+              document.getElementById("myform").submit();
+            })
+            .catch((err) => {
+              console.log(err);
+              alert("Keep ur face in front of camera or in light");
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

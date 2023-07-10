@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    color:inherit;
+    text-decoration:inherit;
+}
+body{
+    background-color: rgba(0, 0, 0, 1);
+    display: grid;
+}
+::placeholder { 
+    font-family:'Montserrat';
+    font-size: 18px;
+    color: white;
+    opacity: 1; 
+  }
+.container{
+    margin-top:5px;
+}
+img{
+    max-width:100%;
+    padding-left:10px;
+    height:40px;
+}
+.logo{
+    padding-top: 12px;
+}
+.header {
+    display: flex;
+ 
+}
+.a_element{
+    font-family: 'Montserrat';
+    padding-left:5px;
+}
+.s1{
+   position: absolute;
+   left:80.5%;
+}
+
+.s2{
+    position: absolute;
+    left:89.5%;
+ }
+.element{
+padding: 20px;
+}
+.a_element:hover{
+    font-weight: bold;
+    font-size:1.1rem;
+    text-decoration: none;
+    background: #990033FF;
+    padding: 10px 15px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    color:white;
+    
+   
+}
+.search_bar{
+    padding:20px;
+}
+.box{
+    position:absolute;
+    top: 8%;
+    left: 48.9%;
+    transform: translate(-50%,-50%);
+
+}
+
+.box1{
+    position:absolute;
+    top: 5.2%;
+    left: 77.5%;
+    transform: translate(-50%,-50%);
+
+}
+.input {
+    padding: 10px;
+    width: 500px;
+    height: 50px;
+    background: none;
+    border: 4px solid #990033FF;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-size: 26px;
+    color: #f5c518;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+    width: 750px;
+    background: #272133;
+    border-radius: 10px;
+}
+i{
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translate(-50%,-50%);
+    font-size: 14px;
+    color: #f6c800;
+    transition: .2s;
+}
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
+}
+
+.section{
+    display:flex;
+    flex-direction: row;
+}
+.aside_left{
+    margin-top:15px;
+    margin-left:12.5px;
+    width:75%;
+    height:500px;
+    background-color:#990033FF;
+    opacity:0.9;
+    border: 4px solid #990033FF;
+    border-radius: 10px;
+}
+.about {
+    margin-bottom: 20px;
+    width: 100%;
+    height:150px;
+    background-color:rgb(238, 237, 237);
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    font-family: 'Montserrat', 'Helvetica', 'Arial', 'sans-serif';
+    border: 2px solid #990033FF;
+    border-radius: 30px;
+
+}
+
+.about_container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    width:100%;
+   
+}
+.start_text p{
+  font-weight: bold;
+  font-family: 'Montserrat';
+}
+.sign_in p{
+    color: #f6c800;
+}
+
+.sign_in p:hover{
+    color: #f6a800;
+}
+.socialmedia{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.fc{
+    background-color: #990033FF; 
+}
+
+
+.button {
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top:40px;
+    font-size: 14px;
+    font-style:'Roboto';
+    letter-spacing: 4px;
+    position: absolute;
+    background-color: #000303;
+    border: none;
+    color: #fff;
+    padding: 25px;
+    width: 150px;
+    text-align: center;
+    transition-duration: 0.7s;
+    overflow: hidden;
+   
+    border-radius: 4px;
+    height:auto;
+  }
+  
+  .button:hover {
+    background:#ff213b;
+   
+    color:white;
+  }
+  
+  .button:after {
+    content: "";
+    background: #f7be04;
+    display: block;
+    position: absolute;
+    padding-top: 120%;
+    padding-left: 120%;
+    margin-left: -20px !important;
+    margin-top: -100%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+  
+  .button:focus { outline:0; }
+  
+  :root {
+    --color: #4973ff;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-sherif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .movies {
+    position: relative;
+    background: #000000;
+    color: white;
+    height: 75vh;
+    display: flex;
+    margin-top:20px;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .movies h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 4.5rem;
+    margin: 0 0 10px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .movies p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
+  }
+  
+  
+  .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color: var(--color);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+  }
+  
+  .waves::before,
+  .waves::after {
+    content: '';
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    top: -65vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+  
+  .waves::before {
+    border-radius: 44%;
+    background: #990033FF;
+    animation: waves 8s linear infinite;
+  }
+  
+  .waves::after {
+    border-radius: 44%;
+    background:#990033FF;
+    animation: waves 15s linear infinite;
+  }
+  
+  @keyframes waves {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+  
+
+   
+.main {
+    display: flex;
+    overflow: hidden;
+    height: 500px;
+  }
+   
+  .main img {
+    float: left;
+    width:  200px;
+    height: 150px;
+    object-fit: cover;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-color: 5px solid #000000;
+    transition: opacity .2s;
+  }
+   
+  .main:hover img {
+    opacity: 0.5;
+
+  }
+   
+  .main img:hover {
+    opacity: 1;
+  }
+   
+  .main .single-column {
+   animation: var(--animation, none) 7s infinite linear;
+  }
+   
+  .main .single-column:hover {
+   animation-play-state: paused;
+  }
+   
+  .main .single-column:nth-of-type(odd) {
+    align-self: flex-end;
+    --direction: 50%;
+  }
+   
+  @keyframes slide {
+    to {
+      -webkit-transform: translateX(var(--direction, -50%));
+              transform: translateY(var(--direction, -50%));
+    }
+  }
+
+
+.col-sm-4 img:hover {
+    transform: translateY(-5px);
+    transition:0.3s;
+}
+
+/* css for a footer */
+
+
+/* css for a genre */
+
+
+.portfolio {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    font-family: 'Montserrat';
+    color: white;
+    
+}
+
+.portfolio_container {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    
+}
+
+.project {
+    width: 25%;
+    height: 300px;
+    margin-top: 10px;
+    /* background-color: blue; */
+    overflow: hidden;
+}
+.pheading{
+    font-size: 1.5rem;
+    font-family: 'Montserrat';
+    color:rgb(216, 35, 35)
+}
+.pr {
+    background-color: black;
+    height: 300px;
+    width: 100%;
+    color: white;
+    font-size: 10px;
+    line-height: 50px;
+    align-items: center;
+    display: flex;
+    font-family: 'Montserrat';
+    justify-content: center;
+    /* adding animation  */
+    cursor: pointer;
+    transition: 2s;
+    flex-wrap: wrap;
+    overflow:hidden;
+}
+
+.pr:hover {
+    height: 80px;
+}
+.pr h1:hover{
+    color:white;
+}
+.project_1 {
+    background-image: url('https://images.unsplash.com/photo-1575919220112-0d5a2dc6a4b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
+}
+
+.project_2 {
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/511/419/618/minions-comedy-movie-wallpaper-preview.jpg');
+    background-size: cover;
+    text-align:center;
+}
+
+.project_3 {
+    background-image: url('http://pediaa.com/wp-content/uploads/2015/09/difference-between-drama-and-theater-theater-1024x643.jpg');
+    background-size: cover;
+    text-align:center;
+}
+
+.project_4 {
+    background-image: url('https://images.unsplash.com/photo-1524008279394-3aed4643b30b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
+    text-align:center;
+    
+
+}
+
+.project_5 {
+    background-image: url('../images/horror.jpg');
+    background-size: cover;
+    text-align:center;
+}
+
+.project_6 {
+    background-image: url('https://images.unsplash.com/photo-1591306208574-969f12f1ebfe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGh5c2ljc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
+    text-align:center;
+
+}
+
+.project_7 {
+    background-image: url('../images/romance.jpg');
+    background-size: cover;
+    text-align:center;
+}
+
+.project_8 {
+    background-image: url('https://images.unsplash.com/photo-1468078809804-4c7b3e60a478?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
+    text-align:center;
+    
+}
+
+/* css for a genre */
+
+/* CSS for a Slideshow */
+/* .slideshow {
+    height: 700px;
+    background-color: #4973ff;
+    width:100%;
+    margin: 100px auto;
+    object-fit:cover;
+    background:url("images/avengerss.jpg");
+    animation: slide 20s infinite;
+}
+
+@keyframes slide{
+    25%{
+        background:url("images/God of eqypt.jpg");
+    }
+    50%{
+        background:url("images/captain-america.jpg");
+    }
+    75%{
+        background:url("images/spider-man-homecoming-banner-e1508433430979.jpg");
+    }
+    100%{
+        background:url("images/wallpapersden.com_joaquin-phoenix-as-joker_2880x1800.jpg");
+    }
+} */
+
+ /* CSS for a Slideshow */
+
+ /* CSS for YOUTUBE IFRAME */
+
+.ytvid1 {
+    height: 151px;
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://media.giphy.com/media/13Nc3xlO1kGg3S/giphy.gif);
+    background-position-y: -55px;
+}
+
+.ytvid {
+    margin-top: 25px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 25px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container1 {
+        width: 90%;
+        display: flex;
+}
+
+.ytcontainer {
+    height: fit-content;
+    width: 100%;
+    background-color:black;
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    animation-name: example;
+    animation-duration: 50s;
+}
+ /* CSS for YOUTUBE IFRAME */
+
+ /* Movies CSS */
+
+ .search{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    padding:0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:#f6c800;
+    font-family: inherit;
+}
+
+.search:focus{
+    outline:0;
+    background-color: #f7f1d8;
+}
+
+.search::placeholder{
+    color: #f6c800;
+}
+
+main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    height: 500px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    background-color: #000000;
+    position:relative;
+    overflow: hidden;
+}
+
+
+.movie img{
+    padding:10px;
+    height:350px;
+    width:85%;
+}
+
+.movie-info{
+    color:#eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem ;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+    margin-top: 0;
+}
+
+.movie-info span{
+    background-color: #5a564a;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green{
+    color:lightgreen;
+}
+
+.movie-info span.orange{
+    color:orange;
+}
+
+.movie-info span.red{
+    color:red;
+}
+
+.overview{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform:translateY(101%);
+    transition:transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform:translateY(0)
+}
+
+#tags{
+    width:80%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.tag{
+    color:white;
+    padding:10px 20px;
+    background-color: #990033FF;
+    border-radius: 50px;
+    margin:5px;
+    display:inline-block;
+    cursor: pointer;
+}
+
+.tag.highlight{
+    background-color: red;
+}
+.no-results{
+    color:white;
+}
+
+.pagination{
+    display:flex;
+    margin:10px 30px;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+.page{
+    padding:20px;
+    cursor:pointer;
+}
+
+.page.disabled{
+    cursor:not-allowed;
+    color:grey;
+}
+
+.current{
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 252, 49);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.know-more{
+    background-color: orange;
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+    border:0;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 5px;
+}
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  

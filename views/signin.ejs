@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/signinstyle.css" />
+    <script type="text/javascript" src="../static/js/signinscript.js"></script>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+   
+  </head>
+  <body>
+    
+    <div class="cotn_principal">
+      <div class="cont_centrar">
+        <div class="cont_login">
+          <div class="cont_info_log_sign_up">
+            <div class="col_md_login">
+              <div class="cont_ba_opcitiy">
+                <h2 style="color: black;font-weight: bolder;">LOGIN</h2>
+                <p style="color: black;font-weight: bolder;">Login to your account</p>
+                <button class="btn_login" onclick="cambiar_login()" style="background-color: black;">
+                  LOGIN
+                </button>
+                <button class="btn_sign_up" style="background-color: black;"><a href="/google" style="text-decoration:none;color: azure;" >
+                   GOOGLE SIGIN
+                </a></button>
+              </div>
+            </div>
+            <div class="col_md_sign_up">
+              <div class="cont_ba_opcitiy">
+                <h2 style="color: black;font-weight: bolder;">SIGN UP</h2>
+                <p style="color: black; font-weight: bolder;">If this is your first time here </p>
+
+                <button class="btn_sign_up"  style="background-color: black;"onclick="cambiar_sign_up()">
+                  SIGN UP
+                </button>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="cont_back_info">
+            <div class="cont_img_back_grey">
+              <img
+                src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="cont_forms">
+            <div class="cont_img_back_">
+              <img
+                src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-0.3.5&q=50&fm=jpg&crop=entropy&s=7686972873678f32efaf2cd79671673d"
+                alt=""
+              />
+            </div>
+            <div class="cont_form_login">
+              <a href="#" onclick="ocultar_login_sign_up()"
+                ><i class="material-icons">&#xE5C4;</i></a
+              >
+              <h2>LOGIN</h2>
+              <form action="/user/login" method="post">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                />
+                <button class="btn_login" onclick="cambiar_login()">
+                  LOGIN
+                </button>
+              </form>
+            </div>
+
+            <div class="cont_form_sign_up">
+              <a href="#" onclick="ocultar_login_sign_up()"
+                ><i class="material-icons">&#xE5C4;</i></a
+              >
+              <h2>SIGN UP</h2>
+              <form action="/user/register" method="post">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  value="<%= typeof email!='undefined'?email:'' %>"
+                />
+                <input
+                  type="name"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                  value="<%= typeof name!='undefined'?name:'' %>"
+                />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                />
+                <input
+                  type="password"
+                  name="password2"
+                  id="password2"
+                  placeholder="Confirm Password"
+                />
+                <button class="btn_sign_up" onclick="cambiar_sign_up()" style="background-color: black;">
+                  SIGN UP
+                </button>
+               
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+          if('<%= error_msg %>'!=""){
+            swal("Errors", '<%= error_msg %>', "error");
+          }
+          else if('<%= success_msg %>'!=""){
+            
+            swal("Congrats", '<%= success_msg %>', "success");
+          }
+          else if('<%= error %>'!=""){
+            swal("Errors", '<%= error %>', "error");
+          }
+          else if('<%= success %>'!=""){
+            
+            swal("Congrats", '<%= success %>', "success");
+          }
+          console.log('<%= success %>',"bjjk");
+          
+      })
+    </script>
+  </body>
+</html>
