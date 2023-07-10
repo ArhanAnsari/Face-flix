@@ -5,7 +5,7 @@ require("dotenv").config()
 
 module.exports=function(passport){
     passport.use(new googleStrategy({
-        clientID:process.env.clientID,
+        clientID:process.env.clientId,
         clientSecret:process.env.clientSecret,
         callbackURL:process.env.callbackURL,
         passReqToCallback:true
