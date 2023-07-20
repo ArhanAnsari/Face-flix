@@ -45,9 +45,14 @@ Face-flix is a facial recognition-based movie recommendation system. It utilizes
   <a href="https://github.com/parth782">
     <img src="https://github.com/parth782.png" alt="Parth Gupta" width="150" height="150">
   </a>
+   <a href="https://github.com/lonewolf235">
+    <img src="https://github.com/lonewolf235.png" alt="Prakash Veer Singh Tomar" width="150" height="150">
+  </a>
 </p>
 <p align="center">
-  <strong>Parth Johri</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Parth Gupta</strong>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Parth Johri</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <strong>Parth Gupta</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <strong>Prakash V.S Tomar</strong>
 </p>
 
 ## License
